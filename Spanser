@@ -1,0 +1,88 @@
+import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { ShoppingCart } from "lucide-react";
+
+export default function BoutiqueLumina() { return ( <div className="min-h-screen bg-gradient-to-b from-white to-amber-50"> {/* Header */} <header className="p-6 flex justify-between items-center shadow-sm bg-white sticky top-0 z-50"> <h1 className="text-2xl font-bold text-amber-700">LUMINA</h1> <nav className="space-x-6 hidden md:flex"> <a href="#mode" className="hover:text-amber-700">Mode & Bijoux</a> <a href="#maison" className="hover:text-amber-700">Maison & Déco</a> <a href="#bienetre" className="hover:text-amber-700">Bien-être</a> </nav> <Button variant="outline" className="flex items-center gap-2"> <ShoppingCart className="w-5 h-5" /> Panier </Button> </header>
+
+{/* Hero */}
+  <section className="text-center py-20 bg-amber-100">
+    <h2 className="text-4xl font-bold text-amber-800 mb-4">
+      Des tendances qui brillent dans ton quotidien ✨
+    </h2>
+    <p className="text-lg text-gray-600 mb-6">
+      Découvre les produits qui font vibrer 2025
+    </p>
+    <Button size="lg" className="bg-amber-700 hover:bg-amber-800 text-white">
+      Découvrir les nouveautés
+    </Button>
+  </section>
+
+  {/* Produits tendance */}
+  <section className="grid md:grid-cols-3 gap-8 p-10" id="mode">
+    <Card className="rounded-2xl shadow-md hover:shadow-xl transition">
+      <img
+        src="https://images.unsplash.com/photo-1600185365528-93a82f4020a4"
+        alt="Bijoux minimalistes"
+        className="rounded-t-2xl h-60 w-full object-cover"
+      />
+      <CardContent className="p-6">
+        <h3 className="text-xl font-semibold">Bijoux minimalistes</h3>
+        <p className="text-gray-600 mt-2 mb-4">
+          Élégance et simplicité pour ton style au quotidien.
+        </p>
+        <div className="flex justify-between items-center">
+          <span className="font-bold text-amber-700">29,99 €</span>
+          <Button size="sm" className="bg-amber-700 hover:bg-amber-800 text-white">
+            Ajouter
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+
+    <Card className="rounded-2xl shadow-md hover:shadow-xl transition" id="maison">
+      <img
+        src="https://images.unsplash.com/photo-1606813902803-69a7e12f3f5a"
+        alt="Lampe LED design"
+        className="rounded-t-2xl h-60 w-full object-cover"
+      />
+      <CardContent className="p-6">
+        <h3 className="text-xl font-semibold">Lampe Lune LED</h3>
+        <p className="text-gray-600 mt-2 mb-4">
+          Crée une ambiance magique avec notre lampe tactile et rechargeable.
+        </p>
+        <div className="flex justify-between items-center">
+          <span className="font-bold text-amber-700">39,99 €</span>
+          <Button size="sm" className="bg-amber-700 hover:bg-amber-800 text-white">
+            Ajouter
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+
+    <Card className="rounded-2xl shadow-md hover:shadow-xl transition" id="bienetre">
+      <img
+        src="https://images.unsplash.com/photo-1600402445614-3a9f9e42e14a"
+        alt="Tapis de yoga éco"
+        className="rounded-t-2xl h-60 w-full object-cover"
+      />
+      <CardContent className="p-6">
+        <h3 className="text-xl font-semibold">Tapis de Yoga Éco</h3>
+        <p className="text-gray-600 mt-2 mb-4">
+          Confort et durabilité pour accompagner tes séances de bien-être.
+        </p>
+        <div className="flex justify-between items-center">
+          <span className="font-bold text-amber-700">49,99 €</span>
+          <Button size="sm" className="bg-amber-700 hover:bg-amber-800 text-white">
+            Ajouter
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  </section>
+
+  {/* Footer */}
+  <footer className="bg-amber-700 text-white text-center p-6 mt-10">
+    <p>© 2025 LUMINA - Tous droits réservés</p>
+  </footer>
+</div>
+
+); }
+
